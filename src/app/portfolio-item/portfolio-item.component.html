@@ -1,0 +1,50 @@
+<div class="portfolio-item">
+  <div class="title">
+    <span id="title">{{name}}</span>
+    <div class="links">
+      <ng-container *ngIf="docsLink"
+                    [ngTemplateOutlet]="ref"
+                    [ngTemplateOutletContext]="{
+      link: docsLink,
+      imgUrl: 'assets/docs.svg'
+      }"></ng-container>
+      <ng-container *ngIf="githubLink"
+        [ngTemplateOutlet]="ref"
+        [ngTemplateOutletContext]=
+          "{
+        link: githubLink,
+        imgUrl: 'assets/github.svg'
+        }">
+      </ng-container>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content-desc">
+      <ng-content></ng-content>
+    </div>
+    <div class="skills">
+      <ng-container *ngFor="let skill of getSkills()">
+        <ng-container [ngTemplateOutlet]="skillRef" [ngTemplateOutletContext]="{
+        name:skill[0],
+        value:skill[1]
+        }"></ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #ref let-link="link" let-imgUrl='imgUrl'>
+  <a [href]="link" target="_blank">
+    <img [src]="imgUrl" class="icon">
+  </a>
+</ng-template>
+
+<ng-template #skillRef let-name="name" let-value='value'>
+  <div class="skill-item">
+    <div class="overlay"
+         [ngStyle]="{'width': value + '%'}">
+      {{name}}
+    </div>
+  </div>
+</ng-template>

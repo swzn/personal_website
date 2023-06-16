@@ -1,0 +1,73 @@
+:host {
+  height: 100%;
+  min-width: 75px;
+  top: 0;
+  font-family: "Lucida Sans", serif;
+}
+
+:host a {
+  text-decoration: none;
+}
+
+:host .nav-item{
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+:host .nav-item .nav-img {
+  pointer-events: none;
+  position: absolute;
+  width: auto;
+  height: 80%;
+  image-rendering: smooth;
+}
+:host a .nav-item {
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+:host a .nav-item:hover {
+  background-color: #736e6e;
+}
+
+:host a .nav-item:hover li {
+  filter: drop-shadow(0 0 1px #ffffff);
+}
+
+:host .nav-item li {
+  padding: 0 10px;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  :host .nav-item .nav-img {
+    pointer-events: none;
+    position: absolute;
+    width: auto;
+    height: 60%;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  :host .nav-item .nav-img {
+    display: none;
+    pointer-events: none;
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+  }
+
+  :host .nav-item li {
+    padding: 0;
+  }
+
+}

@@ -1,0 +1,17 @@
+<a (click)="moveToTag($event)" [href]="link" *ngIf="disableClick == undefined || !disableClick else unclickable">
+<ng-container *ngTemplateOutlet="button"></ng-container>
+</a>
+
+<ng-template #unclickable>
+  <ng-container *ngTemplateOutlet="button"></ng-container>
+</ng-template>
+
+
+<ng-template #button>
+  <div class="nav-item">
+    <li *ngIf="name">
+      {{name}}
+    </li>
+    <img class="nav-img" *ngIf="imgUrl" [src]="imgUrl">
+  </div>
+</ng-template>

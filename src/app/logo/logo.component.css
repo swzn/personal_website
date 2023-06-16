@@ -1,0 +1,15 @@
+:host {
+  display: inline-block;
+  margin: 2px 2px;
+  font-family: "Cascadia Mono", sans-serif;
+  font-size: 11px;
+  border-radius: 15px;
+  max-height: 2em;
+  background-color: #81acf0;
+  color: #f3f3f3;
+  padding: 2px 8px;
+}
+:host span {
+  text-align: center;
+}
+

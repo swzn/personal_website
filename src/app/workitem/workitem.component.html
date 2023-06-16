@@ -1,0 +1,22 @@
+<a [href]="ref" target="_blank" *ngIf="ref else refLess">
+  <ng-container *ngTemplateOutlet="workCard">
+  </ng-container>
+</a>
+
+<ng-template #refLess>
+  <ng-container *ngTemplateOutlet="workCard">
+  </ng-container>
+</ng-template>
+
+<ng-template #workCard>
+  <div class="work-card">
+    <h3 class="work-title hoverable">{{name}}</h3><span class="work-role hoverable">{{role}}</span>
+    <h4>{{duration}}</h4>
+    <span class="work-description">
+      <ng-content></ng-content>
+    </span>
+    <div *ngIf="stack" class="stack">
+      <logo *ngFor="let tech of stack" [name]="tech"></logo>
+    </div>
+  </div>
+</ng-template>
