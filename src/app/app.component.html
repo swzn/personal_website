@@ -2,7 +2,7 @@
   <div class="nav-container">
     <nav-item [link]="'#top'" [name]="'Home'"></nav-item>
     <nav-item [link]="'#exp'" [name]="'Experience'"></nav-item>
-    <nav-item class="non-resp" [disableClick]="true" [imgUrl]="'/assets/logo.png'"></nav-item>
+    <nav-item class="non-resp" [disableClick]="true" [imgUrl]="'./assets/logo.png'"></nav-item>
     <nav-item [link]="'#portfolio'" [name]="'Portfolio'"></nav-item>
     <nav-item [link]="'#skills'" [name]="'Skills'"></nav-item>
   </div>
@@ -65,7 +65,7 @@
         </work>
       </div>
     </div>
-    <a href="/assets/resume.pdf" target="_blank">
+    <a href="./assets/resume.pdf" target="_blank">
       <h2 class="resume">&#x2192; View Complete Résumé</h2>
     </a>
 
@@ -82,7 +82,7 @@
       <portfolio-item
         [name]="'FacebookWebScraper'"
         [githubLink]="'https://github.com/swzn/FacebookWebScraper'"
-        [docsLink]="'/assets/fws.pdf'"
+        [docsLink]="'./assets/fws.pdf'"
         [skills]="{
           'Java':90,
           'Selenium': 60,

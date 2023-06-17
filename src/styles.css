@@ -19,15 +19,15 @@ a:visited {
 
 @font-face {
   font-family: Monolog;
-  src: url("assets/fonts/monolog.otf") format('opentype');
+  src: url("./assets/fonts/monolog.otf") format('opentype');
 }
 
 @font-face {
   font-family: Century Gothic;
-  src: url("assets/fonts/GOTHIC.ttf") format('truetype');
+  src: url("./assets/fonts/GOTHIC.ttf") format('truetype');
 }
 
 @font-face {
   font-family: "Bebas Neue";
-  src: url("assets/fonts/bebas.otf") format('opentype');
+  src: url("./assets/fonts/bebas.otf") format('opentype');
 }
