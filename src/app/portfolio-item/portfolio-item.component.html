@@ -1,7 +1,20 @@
 <div class="portfolio-item">
   <div class="title">
-    <span id="title">{{name}}</span>
+    <a [href]="link" *ngIf="link else simpleTitle">
+      <span id="title">{{name}}</span>
+    </a>
+    <ng-template #simpleTitle>
+      <span id="title">{{name}}</span>
+    </ng-template>
     <div class="links">
+      <ng-container *ngIf="link"
+        [ngTemplateOutlet]="ref"
+        [ngTemplateOutletContext]="{
+          link:link,
+          imgUrl:'assets/website.svg'
+        }">
+
+      </ng-container>
       <ng-container *ngIf="docsLink"
                     [ngTemplateOutlet]="ref"
                     [ngTemplateOutletContext]="{

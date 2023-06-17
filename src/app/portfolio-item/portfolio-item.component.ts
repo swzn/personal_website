@@ -11,6 +11,9 @@ export class PortfolioItemComponent implements AfterContentInit {
   name: string;
 
   @Input()
+  link: string;
+
+  @Input()
   githubLink: string;
 
   @Input()
