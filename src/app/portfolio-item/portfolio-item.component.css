@@ -71,7 +71,7 @@
 }
 
 :host .links {
-  max-height: 58px;
+  max-height: 48px;
   float: right;
   display: flex;
 }
@@ -83,7 +83,7 @@
               0 0 1px var(--highlight);
   width: 90%;
   min-height: 100%;
-  margin: 0 auto;
+  margin: 10px auto;
   border-radius: 20px;
   overflow: hidden;
   color: var(--text-color);

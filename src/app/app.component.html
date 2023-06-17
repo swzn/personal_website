@@ -113,6 +113,8 @@
 
       <portfolio-item
         [name]="'Personal Website'"
+        [githubLink]="'https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-swzn'"
+        [docsLink]="'https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-swzn'"
         [skills]="{
         'Angular 16':90,
         'TypeScript':70,
@@ -133,19 +135,32 @@
           <li>Applied SOLID principles to create a highly customizable website</li>
           <li>Optimized TypeScript code using Angular Lifecycle Hooks</li>
           <li>Deployed lightweight website package using Angular CLI</li>
+          <li>Used CSS, TypeScript and Angular directives to make the website responsive</li>
+          <li>Applied web-design best practices to make website cross-browser</li>
         </ul>
       </portfolio-item>
 
       <portfolio-item
           [name]="'Linux Cluster Monitoring Agent'"
+          githubLink="https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-swzn"
           [skills]="{
           'Bash': 90,
           'Docker': 70,
           'PostgreSQL': 50,
+          'Compute Engine': 50,
           'GCP (Google)': 50,
           'CentOS': 40
           }">
-
+          <p>As part of a program with <a href="https://jrvs.ca/">Jarvis Consulting Group</a> I was tasked with
+            setting up a Google Cloud Platform (GCP) Virtual Machine to run on CentOS. I set up the firewall rules and
+            policies, as well as configured the SSH tunnels to accept valid incoming traffic. After setting up the VM,
+            I wrote a Bash script that would track relevant hardware information in order to achieve the principle of
+            a Minimum Viable Product:
+          </p>
+        <ul>
+          <li>Hosted a local PostgreSQL website using Docker</li>
+          <li>Used Bash scripts, coupled with regular expressions to extract hardware data from the VM</li>
+        </ul>
       </portfolio-item>
     </div>
   </div>
