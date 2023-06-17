@@ -70,7 +70,7 @@ Template:
   workplace on the first line.The second line contains the raw value of the duration 
   attribute. The ng-content inside the HTML tag <workitem> will be displayed as the description 
   of the role. Each element of the stack will instantiate a <logo> component and will be displayed
-   under the description. The entire card opens a new tab redirecting to ref when clicked. 
+  under the description. The entire card opens a new tab redirecting to ref when clicked. 
   
 ```
 
@@ -111,3 +111,40 @@ This is used when `workitem` components are instantiated. The template for `work
 one `logo` component for each element of the `skills` array in the `workitem`. This component may be
 refactored as a template for `workitem` because its architectural scope doesn't escape that of the latter.
 This component should not be instantiated manually as it is tightly coupled to `workitem`.
+
+## Nav Item
+```
+HTML Selector: <nav-item>
+
+Inputs:
+  name: string (Optional)
+  link: string (Optional)
+  disableClick: boolean (Optional)
+  imgUrl: string (Optional)
+  
+Outputs:
+  none
+
+Template:
+  An item designed for flexbox navbars. If imgUrl is defined, then the image will be displayed. 
+  Else, it will display the text in name. If link is defined, the item will redirect to the link
+  on the current window. If the link is an id on the current page, the window will smooth scroll to
+  the appropriate id anchor. The item will change color on hover and have a text glow. If disableClick
+  is set to true, then the latter will not happen.
+```
+
+This is used to quickly generate a navbar without repeating redundant HTML. Furthermore, it helps the user
+get past the styling steps associated with flexboxes. Note: exactly `name` or `imgUrl` may be defined at once.
+These navbar items are meant to be instantiated as follows, preferably at the top of `<body>`:
+
+```
+<nav class="navbar">
+  <div class="nav-container">
+    <nav-item 
+      [link]="link"
+      [name]="name">
+      </nav-item>
+      ...
+  </div>
+</nav>
+```
