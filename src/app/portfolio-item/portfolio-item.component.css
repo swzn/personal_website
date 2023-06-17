@@ -64,6 +64,7 @@
 }
 
 :host .title .links .icon:hover {
+  transform: rotate(22.5deg);
   max-width:  55px;
   max-height: 55px;
   filter: drop-shadow(0 0 3px var(--glow));
