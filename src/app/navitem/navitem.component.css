@@ -2,7 +2,7 @@
   height: 100%;
   min-width: 75px;
   top: 0;
-  font-family: "Lucida Sans", serif;
+  font-family: "Lucida", sans-serif;
 }
 
 :host a {

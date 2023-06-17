@@ -31,3 +31,8 @@ a:visited {
   font-family: "Bebas Neue";
   src: url("./assets/fonts/bebas.otf") format('opentype');
 }
+
+@font-face {
+  font-family: "Lucida";
+  src: url("./assets/fonts/LSANS.ttf") format('truetype');
+}
