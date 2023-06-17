@@ -53,12 +53,47 @@ as follows:
 
 ### Work Item
 ```
+HTML Selector: <work>
+
 Inputs:
+  name: string
+  duration: string
+  ref: string (Optional)
+  role: string
+  stack: string[] (Optional)
+
+Outputs:
+  none
+  
+Template:
+  Will create a div (card) containing the name of the workplace and the role held at the workplace on the first line.
+  The second line contains the raw value of the duration attribute. The ng-content inside the HTML tag <workitem>
+  will be displayed as the description of the role. Each element of the stack will instantiate a <logo> component
+  and will be displayed under the description. The entire card opens a new tab redirecting to ref when clicked. 
+  
+```
+
+This item serves the purpose of showing an itemized list of your past work experience. It can quickly generate dynamic
+cards that give a good description of your role at past workplaces and hyperlink them to a reference/website It should
+be instantiated as follows:
+```
+<work 
+  [name]="name" 
+  [duration]="duration" 
+  [role]="role" 
+  [stack]="[item1, item2, ...]" 
+  [ref]="ref">
+  
+      {Work description}
+      
+</work>
 ```
 
 ### Logo 
 *(to be refactored)*
 ```
+HTML Selector: <logo>
+
 Inputs: 
   name: string
   logo: string (currently obselete)
@@ -67,10 +102,11 @@ Inputs:
 Outputs:
   none
   
-Generates:
+Template:
   A div that contains the name of a skill or tag pertaining to a specific workitem.
 ```
 
 This is used when `workitem` components are instantiated. The template for `workitem` will instantiate
 one `logo` component for each element of the `skills` array in the `workitem`. This component may be
-refactored as a template for `workitem` because its architectural scope doesn't escape that of the latter. 
+refactored as a template for `workitem` because its architectural scope doesn't escape that of the latter.
+This component should not be instantiated manually as it is tightly coupled to `workitem`.
