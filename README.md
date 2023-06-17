@@ -66,10 +66,11 @@ Outputs:
   none
   
 Template:
-  Will create a div (card) containing the name of the workplace and the role held at the workplace on the first line.
-  The second line contains the raw value of the duration attribute. The ng-content inside the HTML tag <workitem>
-  will be displayed as the description of the role. Each element of the stack will instantiate a <logo> component
-  and will be displayed under the description. The entire card opens a new tab redirecting to ref when clicked. 
+  Will create a div (card) containing the name of the workplace and the role held at the 
+  workplace on the first line.The second line contains the raw value of the duration 
+  attribute. The ng-content inside the HTML tag <workitem> will be displayed as the description 
+  of the role. Each element of the stack will instantiate a <logo> component and will be displayed
+   under the description. The entire card opens a new tab redirecting to ref when clicked. 
   
 ```
 
